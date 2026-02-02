@@ -94,6 +94,7 @@ const noBtn = document.getElementById("noBtn");
 const reconsiderBtn = document.getElementById("reconsiderBtn");
 // Make "No" button require multiple clicks
 let noClickCount = 0;
+console.log(noClickCount);
 yesBtn.addEventListener("click", () => {
   proposal.classList.add("hidden");
   yesResponse.classList.remove("hidden");
@@ -116,6 +117,7 @@ yesBtn.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("click", () => {
+  console.log(noClickCount);
   noClickCount++;
 
   if (noClickCount === 1) {
@@ -149,14 +151,6 @@ reconsiderBtn.addEventListener("click", () => {
   
   // Update countdown
   updateCountdown();
-});
-
-// Make "No" button slightly harder to click (fun interaction)
-noBtn.addEventListener("mouseenter", () => {
-  if (noClickCount === 5) {
-    noBtn.textContent = "Ne sei sicura? 🥺";
-  }
-  noClickCount++;
 });
 
 // Rose petal creation - falls from top of page

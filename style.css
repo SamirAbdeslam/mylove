@@ -260,7 +260,6 @@ button {
   font-size: 36px;
   color: #9b59b6;
   font-weight: 700;
-  cursor: pointer;
   transition: all 0.3s ease;
   animation: heartPulse 1.5s ease-in-out infinite;
   text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
